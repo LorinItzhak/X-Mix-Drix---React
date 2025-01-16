@@ -1,0 +1,78 @@
+/* General game container styles */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #1e3c72, #2a5298);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+}
+
+/* The board styles */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Individual square styles */
+.square {
+    width: 100px;
+    height: 100px;
+    background: #f0f0f0;
+    border: 2px solid #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.square:hover {
+    transform: scale(1.05);
+    background: #e1e1e1;
+}
+
+.square.filled {
+    cursor: not-allowed;
+    background: #d1d1d1;
+}
+
+/* Image inside square */
+.symbol {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+/* Game info styles */
+.game-info {
+    text-align: center;
+}
+
+.status {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.status.winner {
+    color: #ffcc00;
+}
+
+.btn {
+    background: #444;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #666;
+}
