@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Square from './Square';
+import Confetti from 'react-confetti';
 
 type SquareValue = 'X' | 'O' | null;
 
@@ -71,6 +72,14 @@ const Board: React.FC = () => {
                     </>
                 )}
             </div>
+
+            {winner && (
+                <Confetti
+                    width={window.innerWidth}
+                    height={window.innerHeight}
+                    colors={winner === 'X' ? ['#ff0000', '#ff5555'] : ['#0000ff', '#5555ff']}
+                />
+            )}
         </div>
     );
 };
